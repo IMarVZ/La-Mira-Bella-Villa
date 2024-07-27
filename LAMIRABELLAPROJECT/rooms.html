@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> La Mira Bella Villa</title>
+   <link rel="shortcut icon" href="logo.ico" type="image/x-icon">  <link href="style.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+  <header>
+  <a href="index.html"> <img src="logoword.png" alt="LA MIRA BELLA VILLA LOGO"></a>  </header>
+  <nav>
+    <ul>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="amenities.html">AMENITIES</a></li>
+      <li><a href="rooms.html">ROOMS</a></li>
+      <li><a href="events.html">EVENTS</a></li>
+    <li><a href="mail.html">RESERVATIONS</a></li>
+    </ul>
+  </nav>
+  <div class="slideshowContainer">
+
+    <div class="mySlides fade">
+      <div class="numberText">1 / 3</div>
+      <img src="bohoroom.jpeg" alt="The Mira Room" style="width:100%">
+      <div class="darkText">The Mira Bedroom</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numberText">2 / 3</div>
+      <img src="curtain.jpeg" alt="The Bella Room" style="width:100%">
+      <div class="text">The Bella Room</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numberText">3 / 3</div>
+      <img src="room.webp" alt="The Marvin Room" style="width:100%">
+      <div class="darkText">The Marvin Room</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+<main>
+<div class="big">La Mira Bedroom</div>"
+  <p class="normalText">
+Discover the convenience and comfort of our Mira bedroom, made for your comfortabilty. For those looking for a cozy getaway to relax and chill at La Mira Villa!</p>
+
+  <div class="big">La Bella Bedroom</div>"
+  <p class="normalText">
+  Welcome to our beautifully designed Belle room suite, where comfort meets luxury. For groups up to four wanting to reconnect and have fun at La Mira Bella Villa!</p>
+  <div class="big">El Marvin Bedroom</div>"
+  <p class="normalText">
+  Experience ultimate comfort and luxury with our most desired suite! With a designated media room just for those looking to relax and enjoy the view, where La Mira Bella Villa has it all!
+</p>
+</main>
+  <br>
+  <div>
+    <div class="bigCenter">RATES</div>
+    <br>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Room Type</th>
+          <th>Price Per Night</th>
+          <th>
+            What they offer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Mira</strong></td>
+          <td>₱1,000</td>
+          <td>One queen bed, private balcony, private bathroom</td>
+        </tr>
+        <tr>
+          <td><strong>Bella</strong></td>
+          <td>₱1500</td>
+          <td>Two queen-size beds, kitchenette, private balcony, private bathroom </td>
+        </tr>
+        <tr>
+          <td><strong>Marvin</strong></td>
+          <td>₱2000</td>
+          <td>Two queen-sized beds, private kitchen, private outdoor balcony with jacuzzi, large spacious bathroom</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="social">
+    <div class="socialMediaText"> Want to be updated? Follow Us on Social Media below!</div>
+    <a href="https://www.facebook.com/groups/518187990641476/">
+      <img src="facebook.png" alt="Facebook Logo" style="display: inline-block; margin: 10px;">
+    </a>
+    <a href="https://x.com/MiraBellaVilla">
+      <img src="twitter.png" alt="Twitter Logo" style="display: inline-block; margin: 10px;">
+    </a>
+    <a href="https://www.instagram.com/lamirabellavilla/">
+      <img src="instagram.png" alt="Instagram Logo" style="display: inline-block; margin: 10px;">
+    </a>
+  </div>
+
+
+  <footer class="brownBack">
+    <p>&copy; 2023 La Mira Bella Villa. All rights reserved.</p>
+    <p>All images used are not offical images of La Mira Bella except of family members.</p>
+
+  </footer>
+
+  </body>
+
+  </html>
